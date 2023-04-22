@@ -6,7 +6,7 @@ void loop()
 	char **args;
 	int status;
 
-	status = 1;
+	status = 0;
 	do
 	{
 		printf("kpsh_shell-$ ");

@@ -30,5 +30,5 @@ int execute_command(char **args)
 		waitpid(pid, &status, WUNTRACED);
 	}
 
-	return 1;
+	return (1);
 }

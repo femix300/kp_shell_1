@@ -1,6 +1,11 @@
 #include "main.h"
 
-int main()
+/**
+* main- entry point
+* Return: 0 (success) always
+*/
+
+int main(void)
 {
 	loop();
 	return (0);
