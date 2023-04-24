@@ -14,6 +14,7 @@ char *kpsh_get_input();
 char **kpsh_split_strings(char *str);
 int execute_command(char **args);
 int kpsh_exit(char **args);
+void iplt_env(char *env[]);
 void loop();
 
 #endif
