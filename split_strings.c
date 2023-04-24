@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+* kpsh_split_strings - splits the string goten from the user
+* as input into tokens and terminate them with null
+* @str: the string to be splited/tokenized
+* Return: an array of tokens obtained by spliting the input string
+*/
 
 char **kpsh_split_strings(char *str)
 {
@@ -38,4 +44,3 @@ char **kpsh_split_strings(char *str)
 
 	return (tokens);
 }
-
