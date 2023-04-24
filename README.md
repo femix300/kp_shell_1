@@ -1,84 +1,57 @@
-Authorized functions and macros
-write, malloc, free, va_start, va_end, va_copy, va_arg
+Mandatory Tasks
+ 0. README, man, AUTHORS
 
-Code will be compiled this way:
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+Write a README.
+Write a man for your shell.
+You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository.
+ 1. Betty would be proud
 
-Tasks
- 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
+Write a beautiful code that passes the Betty checks
+ 2. Simple shell 0.1
 
-Write a function that produces output according to a format.
+Write a UNIX command interpreter
 
-  Prototype: int _printf(const char *format, ...);
+Usage: simple_shell
 
-  Returns: the number of characters printed (excluding the null byte used to end output to strings)
+Your shell should:
 
-  Write output to stdout, the standard output stream
+Display a prompt and wait for the user to type a command. A command line always ends with a new line.
+The prompt is displayed again each time a command has been executed.
+The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
+The command lines are made only of one word. No arguments will be passed to programs.
+If an executable cannot be found, print an error message and display the prompt again.
+Handle errors.
+You have to handle the “end of file” condition (Ctrl+D)
+ 3. Simple shell 0.2
 
-  Handle the conversion specifiers c, s, %
- 1. Education is when you read the fine print. Experience is what you get if you don't
+Simple shell 0.1 +
 
-Handle the following conversion specifiers: d, i
+  - Handle command lines with arguments
+ 4. Simple shell 0.3
 
- 2. Just because it's in print doesn't mean it's the gospel
+Simple shell 0.2 +
 
-Create a man page.
+  - Handle the PATH
+  - fork must not be called if the command doesn't exist
+ 5. Simple shell 0.4
 
- 3. With a face like mine, I do better in print
+Simple shell 0.3 +
 
-Handle the following custom conversion specifiers:
+  - Implement the 'exit' built-in, that exits the shell
+  - Usage: exit
+  - You don't have to hanlde arguments
+ 6. Simple shell 1.0
 
-  	b: the unsigned int argument is converted to binary
- 4. What one has not experienced, one will never understand in print
+Simple shell 0.4 +
 
-Handle the following conversion specifiers: u, o, x, X
+  - Implement the env built-in, that prints the current environment
+ 7. What happens when you type ls -l *.c in the shell
 
- 5. Nothing in fine print is ever good news
+Write a blog post describing step by step what happens when you type ls -l *.c and hit Enter in a shell. Try to explain every step you know of, going in as much details as you can, give examples and draw diagrams when needed. You should merge your previous knowledge of the shell with the specifics of how it works under the hoods (including syscalls).
 
-Use a local buffer of 1024 chars in order to call write as little as possible.
-
- 6. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print
-
-Handle the following conversion specifier: p
-
- 7. My weakness is wearing too much leopard print
-
-Handle the following custom conversion specifier:
-
-  	S : prints the string.
-  	Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x,
-  followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
- The big print gives and the small print takes away
-
-Handle the following flag characters for non-custom conversion specifiers: +, space, #
-
- 9. Sarcasm is lost in print
-
-Handle the following length modifiers for non-custom conversion specifiers: l, h
-
-  Conversion specifiers to handle: d, i, u, o, x, X
- 10. Print some money and give it to us for the rain forests
-
-Handle the field width for non-custom conversion specifiers.
-
- 11. The negative is the equivalent of the composer's score, and the print the performance
-
-Handle the precision for non-custom conversion specifiers.
-
- 12. It's depressing when you're still around and your albums are out of print
-
-Handle the 0 flag character for non-custom conversion specifiers.
-
- 13. Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
-
-Handle the - flag character for non-custom conversion specifiers.
-
- 14. Print is the sharpest and the strongest weapon of our party
-
-Handle the following custom conversion specifier: r (prints the reversed string)
-
- 15. The flood of print has turned reading into a process of gulping rather than savoring
-
-Handle the following custom conversion specifier: R (prints the rot13'ed string)
-
- 16. (All the above options work well together.)
+  - Have at least one picture, at the top of the blog post
+  - Publish your blog post on Medium or LinkedIn
+  - Share your blog post at least on LinkedIn
+  - Only one blog post by team
+  - The blog post must be done and published before the first deadline (it will be part of the manual review)
+  - Please, remember that these blogs must be written in English to further your technical ability in a variety of settings
